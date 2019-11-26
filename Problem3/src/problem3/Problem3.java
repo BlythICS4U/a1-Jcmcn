@@ -1,16 +1,24 @@
 package problem3;
-
-/**
- *
- * @author cgallinaro
- */
+import java.util.Scanner;
 public class Problem3 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        while (1==1){
+            System.out.print("Type the Kilometers: ");
+            double km = input.nextDouble();
+            if (km < 0){
+                break;
+            }
+            System.out.print("Type the Litres: ");
+            double l = input.nextDouble();
+            if (l < 0){
+                break;
+            }
+            double fuel = 100*l/km;
+            System.out.printf("Fuel Efficiency = %.2f ", fuel);
+            System.out.println("\n");
+        }
+        
     }
     
 }
